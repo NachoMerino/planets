@@ -1,0 +1,113 @@
+/* Box sizing fix makes padding + width easier to combine */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  overflow: hidden;
+  background-color: black;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url("../images/bg.jpg");
+    background-size: cover;
+    opacity: .3;
+  }
+}
+
+#solar-system {
+  position: absolute;
+  top: 50%;
+  left: 7%;
+  transform: translate(-50%, -50%);
+  height: 0;
+  width: 25%;
+  padding-top: 25%;
+  width: 110%;
+  padding-top: 110%;
+}
+
+#sun {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: -50%;
+  margin-left: -50%;
+  background-color: #fc3;
+  border-radius: 50%;
+  background: -moz-linear-gradient(center left, #cc9900 22%, #ffdb70 100%);
+  background: -webkit-linear-gradient(center left, #cc9900 22%, #ffdb70 100%);
+  background: linear-gradient(center left, #cc9900 22%, #ffdb70 100%);
+  box-shadow: 0 0 50px #c90;
+}
+
+.planet {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-color: white;
+  z-index: 1;
+
+  &.you-are-here {
+    color: transparent;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: 50%;
+      top: -20px;
+      transform: translate(-50%, -50%);
+      border: 10px solid transparent;
+      border-top-color: inherit;
+      white-space: nowrap;
+    }
+    &:after {
+      content: 'You are here';
+      position: absolute;
+      width: auto;
+      color: inherit;
+      white-space: nowrap;
+      line-height: 1;
+      height: 0;
+      left: 50%;
+      bottom: -20px;
+      transform: translate(-50%, -50%);
+      font-family: sans-serif;
+      font-size: 11px;
+    }
+
+    &#saturn {
+      &:before {
+        top: calc(-25% - 20px);
+      }
+      &:after {
+        bottom: calc(-25% - 20px);
+      }
+      .ring {
+        background-image: radial-gradient(rgba(204, 0, 0, 0)  52%, rgba(204, 0, 0, .2)  52.2%, #c00 95%);
+      }
+    }
+  }
+}
+
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  transform: translate(-50%, -50%) rotateX(70deg) rotateY(-13deg);
+  background-image: radial-gradient(rgba(255, 255, 255, 0) 52%, rgba(255, 255, 255, .2) 52.2%, white 95%);
+  border-radius: inherit;
+  z-index: 0;
+}

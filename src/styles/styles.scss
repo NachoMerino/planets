@@ -1,0 +1,60 @@
+@import "base-setup";
+
+.planet {
+  background-color: white;
+  border-radius: 50%;
+}
+
+.planet.you-are-here {
+  background-color: #c00;
+  border-top-color: #c00;
+  color: #c00;
+}
+
+#mercury {
+  width: 0.35%;
+  height: 0.35%;
+  left: 51.6%;
+}
+
+#venus {
+  width: 0.87%;
+  height: 0.87%;
+  left: 53.2%;
+}
+
+#earth {
+  width: 0.87%;
+  height: 0.87%;
+  left: 54.3%;
+}
+
+#mars {
+  width: 0.49%;
+  height: 0.49%;
+  left: 55.9%;
+}
+
+#jupiter {
+  width: 10.27%;
+  height: 10.27%;
+  left: 74.4%;
+}
+
+#saturn {
+  width: 8.67%;
+  height: 8.67%;
+  left: 89.8%;
+}
+
+#uranus {
+  width: 3.67%;
+  height: 3.67%;
+  left: 124.2%;
+}
+
+#neptune {
+  width: 3.56%;
+  height: 3.56%;
+  left: 162.5%
+}
